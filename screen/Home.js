@@ -265,7 +265,7 @@ const Home = () => {
                 visible={showAddToBagModel}
                 >
                     <BlurView
-                    style={{flex:1,alignItems:"center",justifyContent:"center"
+                    style={{flex:1,justifyContent:"center",alignItems:"center"
                             }}
                 blurType='light'
                 blurAmount={20}
@@ -274,7 +274,7 @@ const Home = () => {
                         <TouchableOpacity
                         style={styles.absolute}
                         onPress={()=>{
-                            setSelectedItem(null);
+                            setSelectedItem(null);   
                             setSelectedSize("");
                             setShawAddToBagModel(false)
                         }}
@@ -282,21 +282,20 @@ const Home = () => {
                         </TouchableOpacity>
                             {/* Model Content */}
 
-                            <View style={{justifyContent:"center",width:"85%"}}>
+                        <View style={{ justifyContent: "center", width: "85%",height:150, backgroundColor: selectedItem.bgColor}}>
                                 <View>
                                     <Image
                                     source={selectedItem.img}
                                     resizeMode='contain'
                                     style={{
-                                        width:"85%",
+                                        width:"90%",
                                         height:170,
                                         transform:[
                                             {
                                                 rotate:'-15deg'
                                             }
                                         ]
-                                    }
-                                    }
+                                    }}
                                     />
                                 </View>
                             </View>
